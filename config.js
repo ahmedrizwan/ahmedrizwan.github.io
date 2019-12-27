@@ -2,7 +2,7 @@
 
 module.exports = {
   url: 'https://ahmedrizwan.github.io',
-  pathPrefix: '/',
+  pathPrefix: '/ahmedrizwan.github.io',
   title: 'Blog by Ahmed Rizwan',
   subtitle: 'Senior Software Engineer @Snappymob',
   copyright: '© All rights reserved.',
