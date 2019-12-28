@@ -1,22 +1,26 @@
 // @flow strict
-import React from 'react';
-import { Link } from 'gatsby';
-import kebabCase from 'lodash/kebabCase';
-import Sidebar from '../components/Sidebar';
-import Layout from '../components/Layout';
-import Page from '../components/Page';
-import { useSiteMetadata, useCategoriesList } from '../hooks';
+import React from "react";
+import { Link } from "gatsby";
+import kebabCase from "lodash/kebabCase";
+import Author from "../components/Sidebar/Author";
+import Contacts from "../components/Sidebar/Contacts";
+import Layout from "../components/Layout";
+import Page from "../components/Page";
+import { useSiteMetadata, useCategoriesList } from "../hooks";
 
 const CategoriesListTemplate = () => {
-  const { title, subtitle } = useSiteMetadata();
+  const { author, title, subtitle } = useSiteMetadata();
   const categories = useCategoriesList();
 
   return (
     <Layout title={`Categories - ${title}`} description={subtitle}>
-      <Sidebar />
-      <Page title="Categories">
+      <Page>
+        <Author author={author} isIndex={true} />
+        <Contacts contacts={author.contacts} />
+
+        <h2>Categories</h2>
         <ul>
-          {categories.map((category) => (
+          {categories.map(category => (
             <li key={category.fieldValue}>
               <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
                 {category.fieldValue} ({category.totalCount})

@@ -2,7 +2,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
 import Feed from "../components/Feed";
 import Page from "../components/Page";
 import Author from "../components/Sidebar/Author";
@@ -18,7 +17,7 @@ type Props = {
 
 const IndexTemplate = ({ data, pageContext }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const { author, copyright } = useSiteMetadata();
+  const { author } = useSiteMetadata();
 
   const {
     currentPage,
@@ -38,6 +37,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
         <div style={{ margin: 50 }}></div>
+        <h2>Articles</h2>
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}
