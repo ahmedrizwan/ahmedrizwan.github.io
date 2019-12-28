@@ -3,7 +3,7 @@
  */
 html {
   font-size: $typographic-root-font-size;
-  background-color: #111111;
+  background-color: #1b1b1b;
 }
 
 body {
@@ -26,7 +26,7 @@ h4,
 h5,
 h6 {
   font-family: $typographic-font-family;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h1 {
@@ -106,7 +106,7 @@ a {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 ul {

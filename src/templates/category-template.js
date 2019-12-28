@@ -42,8 +42,7 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
       <Page>
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
-
-        <h2>{category}</h2>
+        <p style={{ fontSize: 40 }}>{category}</p>
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}

@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = {
-  url: 'https://ahmedrizwan.github.io',
+  url: 'https://www.ahmedrizwan.com',
   pathPrefix: '/',
-  title: 'Blog by Ahmed Rizwan',
+  title: 'Blog by Ahmed',
   subtitle: 'Senior Software Engineer @Snappymob',
   copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 7,
+  postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   menu: [
@@ -15,19 +15,11 @@ module.exports = {
       label: 'Articles',
       path: '/'
     },
-    {
-      label: 'About me',
-      path: '/pages/about'
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
-    }
   ],
   author: {
     name: 'Ahmed Rizwan',
-    photo: '/photo.jpg',
-    bio: 'Software Engineer @Snappymob',
+    photo: '/photo.png',
+    bio: 'Senior Software Engineer @Snappymob',
     contacts: {
       email: '',
       facebook: '',

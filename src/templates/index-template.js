@@ -16,8 +16,7 @@ type Props = {
 };
 
 const IndexTemplate = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const { author } = useSiteMetadata();
+  const { author, title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const {
     currentPage,
@@ -36,8 +35,6 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
       <Page>
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
-        <div style={{ margin: 50 }}></div>
-        <h2>Articles</h2>
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}

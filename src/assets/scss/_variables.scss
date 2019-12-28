@@ -3,12 +3,12 @@
  */
 
 // Colors
-$color-base: rgb(199, 199, 199);
-$color-primary: rgb(249, 13, 88);
-$color-secondary: #F7A046;
+$color-base: rgb(238, 238, 238);
+$color-primary: rgb(255, 11, 89);
+$color-secondary: rgb(255, 145, 27);
 
 $color-white: #FFF;
-$color-gray: lighten($color-base, 40%);
+$color-gray: #787878;
 $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
 
@@ -32,10 +32,10 @@ $button-height: 35px;
 $button-border-radius: 20px;
 
 // Layout
-$layout-post-single-width: 945px;
+$layout-post-single-width: 1045px;
 $layout-post-width: $layout-post-single-width - 305px;
 
-$layout-width: 1070px;
+$layout-width: 1270px;
 $layout-breakpoint-sm: 685px;
 $layout-breakpoint-md: 960px;
 $layout-breakpoint-lg: 1100px;

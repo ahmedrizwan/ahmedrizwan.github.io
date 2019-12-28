@@ -39,8 +39,7 @@ const TagTemplate = ({ data, pageContext }: Props) => {
       <Page>
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
-
-        <h2>{tag}</h2>
+        <p style={{ fontSize: 40 }}>{tag}</p>
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}

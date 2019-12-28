@@ -17,8 +17,7 @@ const CategoriesListTemplate = () => {
       <Page>
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
-
-        <h2>Categories</h2>
+        <p style={{ fontSize: 40 }}>Categories</p>
         <ul>
           {categories.map(category => (
             <li key={category.fieldValue}>

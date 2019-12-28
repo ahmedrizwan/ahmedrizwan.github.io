@@ -17,8 +17,7 @@ const TagsListTemplate = () => {
       <Page>
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
-
-        <h2>Tags</h2>
+        <p style={{ fontSize: 40 }}>Tags</p>
         <ul>
           {tags.map(tag => (
             <li key={tag.fieldValue}>
