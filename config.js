@@ -6,7 +6,7 @@ module.exports = {
   title: 'Blog by Ahmed',
   subtitle: 'Senior Software Engineer @Snappymob',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'ahmedrizwan',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
