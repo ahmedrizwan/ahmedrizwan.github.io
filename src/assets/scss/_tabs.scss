@@ -7,7 +7,10 @@
 
   &__tab-list {
     margin: 0 0 30px;
+    margin-right: -20px;
     padding: 0;
+    display: flex;
+    overflow-x: scroll;
   }
 
   &__tab {
@@ -49,7 +52,6 @@
 
   &__tab-panel {
     display: none;
-
     &--selected {
       display: block;
     }
