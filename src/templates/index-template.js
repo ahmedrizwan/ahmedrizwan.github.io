@@ -9,6 +9,8 @@ import Contacts from "../components/Sidebar/Contacts";
 import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
 import type { PageContext, AllMarkdownRemark } from "../types";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "../assets/scss/_tabs.scss";
 
 type Props = {
   data: AllMarkdownRemark,
@@ -16,7 +18,11 @@ type Props = {
 };
 
 const IndexTemplate = ({ data, pageContext }: Props) => {
-  const { author, title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+  const {
+    author,
+    title: siteTitle,
+    subtitle: siteSubtitle
+  } = useSiteMetadata();
 
   const {
     currentPage,
@@ -35,13 +41,28 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
       <Page>
         <Author author={author} isIndex={true} />
         <Contacts contacts={author.contacts} />
-        <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
+
+        <Tabs>
+          <TabList>
+            <Tab>Articles</Tab>
+            {/* <Tab>Talks</Tab> */}
+            {/* <Tab>About Me</Tab> */}
+            {/* <Tab>Contact</Tab> */}
+          </TabList>
+
+          <TabPanel>
+            <Feed edges={edges} />
+            <Pagination
+              prevPagePath={prevPagePath}
+              nextPagePath={nextPagePath}
+              hasPrevPage={hasPrevPage}
+              hasNextPage={hasNextPage}
+            />
+          </TabPanel>
+          <TabPanel>
+            <h1>Talks</h1>
+          </TabPanel>
+        </Tabs>
       </Page>
     </Layout>
   );
