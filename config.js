@@ -19,7 +19,7 @@ module.exports = {
   author: {
     name: 'Ahmed Rizwan',
     photo: '/photo.png',
-    bio: 'Senior Software Engineer @Snappymob',
+    bio: 'Android Engineer @Snappymob',
     contacts: {
       email: '',
       facebook: '',
