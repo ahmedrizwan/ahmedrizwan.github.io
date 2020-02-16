@@ -1,0 +1,29 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+@import "../../../../assets/scss/base";
+
+.body-component {
+  font-size: $typographic-base-font-size * 1.0;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: #cccccc;
+    height: 100%;
+    left: -3px;
+    min-height: 95%;
+    position: absolute;
+    top: 10px;
+    width: 2px;
+  }
+
+  .body-component-title {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: $typographic-base-font-size * 1.5;
+    margin-top: -5px;
+    text-align: left;
+  }
+}

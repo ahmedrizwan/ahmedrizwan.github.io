@@ -11,6 +11,7 @@ import { useSiteMetadata } from "../hooks";
 import type { PageContext, AllMarkdownRemark } from "../types";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "../assets/scss/_tabs.scss";
+import Talks from '../components/Talks/Talks';
 
 type Props = {
   data: AllMarkdownRemark,
@@ -58,6 +59,9 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
               hasPrevPage={hasPrevPage}
               hasNextPage={hasNextPage}
             />
+          </TabPanel>
+          <TabPanel>
+            <Talks />
           </TabPanel>
         </Tabs>
       </Page>

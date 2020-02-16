@@ -1,0 +1,34 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+@import "../../../../assets/scss/base";
+
+.description-component {
+  margin-top: 5px;
+  text-align: left;
+}
+
+.description-component-text {
+  font-weight: 300;
+}
+
+.description-component-text-optional {
+  color: #818a91;
+  font-style: italic;
+
+  &::before {
+    content: "- (";
+    margin-left: 5px;
+  }
+
+  &::after {
+    content: ")";
+  }
+}
+
+.description-component-text-event {
+  color: $color-secondary;
+}
+
+.top-margin {
+  margin-top: 10px !important;
+}

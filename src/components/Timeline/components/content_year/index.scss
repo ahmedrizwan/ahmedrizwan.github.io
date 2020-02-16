@@ -1,0 +1,27 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+@import "../../../../assets/scss/base";
+
+.year-component {
+  color: #fff;
+  position: relative;
+  width: 80px;
+  max-width: 80px;
+  min-width: 80px;
+  font-size: $typographic-base-font-size * 1.0;
+
+  &::after {
+    background: #ccc;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    position: absolute;
+    right: -3px;
+    top: 5px;
+    width: 10px;
+  }
+
+  .item-year-component {
+    margin-bottom: 8px;
+  }
+}
