@@ -45,9 +45,9 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
         <Tabs>
           <TabList>
             <Tab>Articles</Tab>
-            {/* <Tab>Talks</Tab> */}
+            <Tab>Talks</Tab>
             {/* <Tab>About Me</Tab> */}
-            {/* <Tab>Contact</Tab> */}
+            <Tab>Contact</Tab>
           </TabList>
 
           <TabPanel>
@@ -58,9 +58,6 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
               hasPrevPage={hasPrevPage}
               hasNextPage={hasNextPage}
             />
-          </TabPanel>
-          <TabPanel>
-            <h1>Talks</h1>
           </TabPanel>
         </Tabs>
       </Page>
