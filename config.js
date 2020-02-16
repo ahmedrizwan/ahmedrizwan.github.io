@@ -25,7 +25,7 @@ module.exports = {
       facebook: '',
       telegram: '',
       github: 'ahmedrizwan',
-      medium: '',
+      medium: '@ahmedrizwan',
       twitter: 'sudo_rizwan',
       linkedin: 'ahmedrz',
       rss: '',

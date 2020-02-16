@@ -48,7 +48,7 @@ const getIcon = (name: string) => {
       icon = ICONS.YOUTUBE;
       break;
     case 'medium':
-      icon = ICONS.EMAIL;
+      icon = ICONS.MEDIUM;
       break;
     default:
       icon = {};

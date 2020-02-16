@@ -12,6 +12,7 @@ const useSiteMetadata = () => {
               bio
               photo
               contacts {
+                medium
                 facebook
                 github
                 twitter
@@ -26,7 +27,6 @@ const useSiteMetadata = () => {
                 weibo
                 codepen
                 youtube
-                medium
               }
             }
             menu {
