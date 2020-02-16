@@ -8,7 +8,7 @@ const Description = props => {
 
   return (
     <div className="description-component">
-      <span className="description-component-text">{text}</span>
+      {text ? <span className="description-component-text">{text}</span> : null}
 
       {optional ? (
         <span className="description-component-text-optional">{optional}</span>
@@ -24,7 +24,7 @@ const Description = props => {
 };
 
 Description.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   optional: PropTypes.string,
   event: PropTypes.string
 };

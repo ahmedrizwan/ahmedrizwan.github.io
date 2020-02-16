@@ -48,7 +48,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
             <Tab>Articles</Tab>
             <Tab>Talks</Tab>
             {/* <Tab>About Me</Tab> */}
-            <Tab>Contact</Tab>
+            {/* <Tab>Contact</Tab> */}
           </TabList>
 
           <TabPanel>
