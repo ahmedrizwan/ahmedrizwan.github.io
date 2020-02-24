@@ -4,6 +4,7 @@
 
 .body-component {
   font-size: $typographic-base-font-size * 1.0;
+  font-family: $typographic-font-family;
   padding-bottom: 30px;
   padding-left: 15px;
   position: relative;
@@ -22,6 +23,7 @@
   .body-component-title {
     color: #fff;
     margin-bottom: 10px;
+    font-family: $typographic-font-family;
     font-size: $typographic-base-font-size * 1.5;
     margin-top: -5px;
     text-align: left;
