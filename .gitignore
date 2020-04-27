@@ -1,8 +1,8 @@
-node_modules/
-.cache/
-public/
-npm-debug.log
-.eslintcache
-.gatsby-context.js
-.idea
-gatsby-starter-lumen.iml
+*.log
+.DS_Store
+.next
+node_modules
+.env*
+public/sitemap.xml
+.mdx-data
+.now
