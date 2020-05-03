@@ -1,0 +1,126 @@
+---
+title: 'Quick Recipe for creating DSLs in Kotlin'
+publishedAt: '2019-11-28'
+summary: 'A pretty cool feature in Kotlin is the ability to construct custom DSLs. And you need just four things in order to write them.'
+---
+
+A pretty cool feature in Kotlin is the ability to construct custom DSLs. And you need just four things in order to write them.
+
+- Infix Notations
+- Extension Methods
+- Lambdas
+- Lambda with Receiver
+
+Let’s go through these one by one.
+
+## Infix Notation
+
+<blockquote>Remove brackets & dots!</blockquote>
+
+```kotlin
+class Car {
+   fun drive(miles: Int) {
+      ...
+   }
+}
+val car = Car()
+car.drive(10) // normal stuff
+```
+
+Just add infix notation before method declaration for it to work
+
+```kotlin
+class Car {
+   infix fun drive(miles: Int) {
+      ...
+   }
+}
+val car = Car()
+car drive 10 // no brackets! no dots!
+```
+
+## Extension Methods
+
+<blockquote>Add new functions to any class without having to inherit!</blockquote>
+
+```kotlin
+val name = "Ahmed Riz"
+name.shout() // won't compile as shout() is not part of String class
+```
+
+In order to make it a part of String class (without inheriting), create shout method prefixed with “String.”
+
+```kotlin
+fun String.shout() {
+  println("\$this !") // this refers to the value of string itself
+}
+val name = "Ahmed Riz"
+name.shout() // works! and prints out: Ahmed Riz !
+```
+
+Extension methods are project-scoped — you can access them anywhere inside the project.
+
+## Lambdas
+
+<blockquote>Pass anonymous function literals (to higher order functions)!</blockquote>
+
+```kotlin
+// a higher order function
+fun process(value: Int, operation: (Int) -> Unit) {
+  operation(value)
+}
+// when calling, we can pass in a lambda expression
+process(10, { value -> println(value) })
+// and because it's the last param, we can extract it out
+// just to clean things up even further
+process(10) { value -> println(value) }
+```
+
+## Lambda with Receiver
+
+<blockquote>Pass anonymous function literals (to higher order functions), but with a receiver type!</blockquote>
+
+```kotlin
+// slight change to the previous higher order function
+// now instead of operation: (Int) -> Unit
+// we'll do operation: Int.() -> Unit
+// This makes Int the receiver type
+fun process(value: Int, operation: Int.() -> Unit) {
+  value.operation()
+}
+// usage now becomes
+process(10) { println(this) } // prints out: 10
+```
+
+## Combining These!
+
+Let’s now create a DSL of our own. Just to demonstrate
+
+```kotlin
+val myProfile = "Ahmed Rizwan" profile {
+  age = 90
+  phone = "123 456 789"
+}
+```
+
+Code in order to make it a valid DSL is as simple as this
+
+```kotlin
+class Profile(
+  val name: String,
+  var age: Int? = null,
+  var phone: String? = null
+)
+
+infix fun String.profile(create: Profile.() -> Unit): Profile {
+  val profile = Profile(this)
+  profile.create()
+  return profile
+}
+```
+
+And that’s it!
+
+Although the DSL above might not be a very useful one in real world — but hopefully it gives you an idea of how we can utilize these different Kotlin features to create some custom DSLs of our own.
+
+Happy coding!
