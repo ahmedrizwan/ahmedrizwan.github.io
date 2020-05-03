@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
 
+const GA_TRACKING_ID = 'UA-156277329-1';
+
 class MyDocument extends Document {
   render() {
     return (
@@ -46,6 +48,21 @@ class MyDocument extends Document {
             color="#4a9885"
             href="/static/favicons/safari-pinned-tab.svg"
             rel="mask-icon"
+          />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}');
+            `
+            }}
           />
         </Head>
         <body>
