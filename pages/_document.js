@@ -1,8 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
 
-const GA_TRACKING_ID = 'UA-131784128-1';
-
 class MyDocument extends Document {
   render() {
     return (
@@ -21,43 +19,33 @@ class MyDocument extends Document {
             content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
             name="google-site-verification"
           />
-          <link href="/static/favicons/photo.png" rel="shortcut icon" />
+          <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
           <link href="/static/favicons/site.webmanifest" rel="manifest" />
           <link
             href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap"
             rel="stylesheet"
           />
           <link
-            href="/static/favicons/photo.png"
+            href="/static/favicons/apple-touch-icon.png"
             rel="apple-touch-icon"
             sizes="180x180"
           />
           <link
-            href="/static/favicons/photo.png"
+            href="/static/favicons/favicon-32x32.png"
             rel="icon"
             sizes="32x32"
             type="image/png"
           />
           <link
-            href="/static/favicons/photo.png"
+            href="/static/favicons/favicon-16x16.png"
             rel="icon"
             sizes="16x16"
             type="image/png"
           />
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_TRACKING_ID}');
-            `
-            }}
+          <link
+            color="#4a9885"
+            href="/static/favicons/safari-pinned-tab.svg"
+            rel="mask-icon"
           />
         </Head>
         <body>
