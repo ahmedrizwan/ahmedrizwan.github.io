@@ -11,7 +11,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "deploy": "yarn run build && yarn run export"
   },
   "repository": {
     "type": "git",
