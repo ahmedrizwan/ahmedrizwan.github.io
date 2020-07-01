@@ -1,4 +1,4 @@
-const title = 'Ahmed Rizwan – Software Engineer';
+const title = 'Ahmed Rizwan';
 const description = 'Software Engineer, Writer and Speaker.';
 
 const SEO = {
