@@ -50,7 +50,7 @@ const Index = () => {
             Ahmed Rizwan
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            I’m an Android Engineer
+            I’m a Senior Software Engineer
             <a href="https://twitter.com/snappymob"> @Snappymob</a>, writer and
             speaker. This is my personal blog site.
           </Text>

@@ -1,5 +1,5 @@
-const title = 'Ahmed Rizwan – Android Engineer';
-const description = 'Android Engineer, Writer and Speaker.';
+const title = 'Ahmed Rizwan – Software Engineer';
+const description = 'Software Engineer, Writer and Speaker.';
 
 const SEO = {
   title,
