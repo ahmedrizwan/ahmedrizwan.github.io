@@ -50,11 +50,11 @@ const Container = ({ children }) => {
               Home
             </Button>
           </NextLink>
-          {/* <NextLink href="/blog" passHref>
+          <NextLink href="/talks" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Talks
             </Button>
-          </NextLink> */}
+          </NextLink>
         </Box>
         <IconButton
           aria-label="Toggle dark mode"

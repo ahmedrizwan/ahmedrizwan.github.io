@@ -3,6 +3,9 @@ import { theme as chakraTheme } from '@chakra-ui/core';
 
 const theme = {
   ...chakraTheme,
+  config: {
+    initialColorMode: 'dark' // "light" | "dark"
+  },
   fonts: {
     ...chakraTheme.fonts,
     body: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`

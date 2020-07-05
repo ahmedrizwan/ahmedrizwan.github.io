@@ -10,8 +10,11 @@ import {
   InputRightElement,
   Icon
 } from '@chakra-ui/core';
+
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
+import Emoji from '../components/Emoji';
+
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 
 const Index = () => {
@@ -47,12 +50,13 @@ const Index = () => {
           maxWidth="700px"
         >
           <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            Ahmed Rizwan
+            Hey <Emoji symbol="👋" label="wave" />, I'm Ahmed Rizwan
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
             I’m a Senior Software Engineer
             <a href="https://twitter.com/snappymob"> @Snappymob</a>, writer and
-            speaker. This is my personal blog site.
+            speaker. I write mostly on Android and Web. This is my personal blog
+            site.
           </Text>
         </Flex>
 
