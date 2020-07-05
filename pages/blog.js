@@ -14,6 +14,7 @@ import {
 
 import BlogPost from '../components/BlogPost';
 import Container from '../components/Container';
+import { CustomLink } from '../components/MDXComponents';
 
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 
@@ -66,7 +67,7 @@ const About = () => {
               Blog
             </Heading>
             <Text color={secondaryTextColor[colorMode]}>
-              More blogs on their way, migration from Medium is in progress.
+							More blogs are on their way, currently in the process of migrating them over from <CustomLink href="https://medium.com/@ahmedrizwan">Medium</CustomLink>. 
             </Text>
             <InputGroup my={4} mr={4} w="100%">
               <Input
