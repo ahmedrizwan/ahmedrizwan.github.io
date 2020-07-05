@@ -1,38 +1,16 @@
-import React, { useState } from 'react';
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Input,
-  InputGroup,
-  InputRightElement,
-  Icon
-} from '@chakra-ui/core';
+import React from 'react';
+import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core';
 
 import Container from '../components/Container';
-import BlogPost from '../components/BlogPost';
 import Emoji from '../components/Emoji';
 import { CustomLink } from '../components/MDXComponents';
 
-import { frontMatter as blogPosts } from './blog/**/*.mdx';
-
 const Index = () => {
-  const [searchValue, setSearchValue] = useState('');
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: 'gray.700',
     dark: 'gray.400'
   };
-  const filteredBlogPosts = blogPosts
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    )
-    .filter((frontMatter) =>
-      frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
-    );
 
   return (
     <Container>
@@ -61,29 +39,6 @@ const Index = () => {
             , writer and speaker. I write mostly on Android and Web. This is my
             personal blog site.
           </Text>
-        </Flex>
-
-        <InputGroup my={4} mr={4} w="100%">
-          <Input
-            aria-label="Search articles"
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Search articles"
-          />
-          <InputRightElement>
-            <Icon name="search" color="gray.300" />
-          </InputRightElement>
-        </InputGroup>
-        <Flex
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          maxWidth="700px"
-          mt={8}
-        >
-          {!filteredBlogPosts.length && 'No posts found.'}
-          {filteredBlogPosts.map((frontMatter) => (
-            <BlogPost key={frontMatter.title} {...frontMatter} />
-          ))}
         </Flex>
       </Stack>
     </Container>

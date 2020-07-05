@@ -1,11 +1,6 @@
 import React from 'react';
 import { NextSeo } from 'next-seo';
-import {
-  useColorMode,
-  Heading,
-  Flex,
-  Stack,
-} from '@chakra-ui/core';
+import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core';
 
 import Timeline from '../components/Timeline';
 import Container from '../components/Container';
@@ -13,7 +8,7 @@ import Container from '../components/Container';
 const url = 'https://ahmedrizwan.com/talks';
 const title = 'Talks – Ahmed Rizwan';
 
-const About = () => {
+const Speaking = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: 'gray.700',
@@ -46,9 +41,12 @@ const About = () => {
             maxWidth="700p"
           >
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-							Talks
+              Speaking
             </Heading>
-						<Timeline />
+            <Text color={secondaryTextColor[colorMode]}>
+              These are some of the talks I have given in recent times.
+            </Text>
+            <Timeline />
           </Flex>
         </Stack>
       </Container>
@@ -56,4 +54,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Speaking;

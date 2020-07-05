@@ -50,9 +50,14 @@ const Container = ({ children }) => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="/talks" passHref>
+          <NextLink href="/blog" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
-              Talks
+              Blog
+            </Button>
+          </NextLink>
+          <NextLink href="/speaking" passHref>
+            <Button as="a" variant="ghost" p={[1, 4]}>
+              Speaking
             </Button>
           </NextLink>
         </Box>
