@@ -18,7 +18,7 @@ import Container from '../components/Container';
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 
 const url = 'https://ahmedrizwan.com/talks';
-const title = 'Talks – Ahmed Rizwan';
+const title = 'Blog – Ahmed Rizwan';
 
 const About = () => {
   const [searchValue, setSearchValue] = useState('');

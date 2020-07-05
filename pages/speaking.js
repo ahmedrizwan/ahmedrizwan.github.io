@@ -6,7 +6,7 @@ import Timeline from '../components/Timeline';
 import Container from '../components/Container';
 
 const url = 'https://ahmedrizwan.com/talks';
-const title = 'Talks – Ahmed Rizwan';
+const title = 'Speaking – Ahmed Rizwan';
 
 const Speaking = () => {
   const { colorMode } = useColorMode();
