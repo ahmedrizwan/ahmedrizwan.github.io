@@ -8,6 +8,7 @@ import {
   Link,
   PseudoBox,
   Text,
+  Divider,
   useColorMode
 } from '@chakra-ui/core';
 import { jsx } from '@emotion/core';
@@ -69,9 +70,36 @@ const CustomLink = (props) => {
   return <Link color={color[colorMode]} isExternal {...props} />;
 };
 
+const Quote = (props) => {
+  const { colorMode } = useColorMode();
+  const bgColor = {
+    light: 'blue.50',
+    dark: 'blue.900'
+  };
+
+  return (
+    <Callout
+      mt={4}
+      w="98%"
+      bg={bgColor[colorMode]}
+      variant="left-accent"
+      status="info"
+      css={{
+        '> *:first-of-type': {
+          marginTop: 0,
+          marginLeft: 8
+        }
+      }}
+      {...props}
+    />
+  );
+};
+
 const DocsHeading = (props) => (
   <Heading
     css={{
+      scrollMarginTop: '100px',
+      scrollSnapMargin: '100px', // Safari
       '&[id]': {
         pointerEvents: 'none'
       },
@@ -112,6 +140,16 @@ const DocsHeading = (props) => (
   </Heading>
 );
 
+const Hr = () => {
+  const { colorMode } = useColorMode();
+  const borderColor = {
+    light: 'gray.200',
+    dark: 'gray.600'
+  };
+
+  return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
+};
+
 const MDXComponents = {
   h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,
   h2: (props) => <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />,
@@ -121,7 +159,7 @@ const MDXComponents = {
   ),
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
-  hr: (props) => <Box as="hr" borderTopWidth="1px" my={8} {...props} />,
+  hr: Hr,
   table: Table,
   th: THead,
   td: TData,
@@ -130,16 +168,8 @@ const MDXComponents = {
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,
-  blockquote: (props) => (
-    <Callout
-      mt={4}
-      w="98%"
-      variant="left-accent"
-      status="info"
-      css={{ '> *:first-of-type': { marginTop: 0 } }}
-      {...props}
-    />
-  )
+  blockquote: Quote
 };
 
+export { CustomLink };
 export default MDXComponents;

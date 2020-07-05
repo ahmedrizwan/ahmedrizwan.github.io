@@ -14,6 +14,7 @@ import {
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 import Emoji from '../components/Emoji';
+import { CustomLink } from '../components/MDXComponents';
 
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 
@@ -53,10 +54,12 @@ const Index = () => {
             Hey <Emoji symbol="👋" label="wave" />, I'm Ahmed Rizwan
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            I’m a Senior Software Engineer
-            <a href="https://twitter.com/snappymob"> @Snappymob</a>, writer and
-            speaker. I write mostly on Android and Web. This is my personal blog
-            site.
+            I’m a Senior Software Engineer{' '}
+            <CustomLink href="https://twitter.com/snappymob">
+              @Snappymob
+            </CustomLink>
+            , writer and speaker. I write mostly on Android and Web. This is my
+            personal blog site.
           </Text>
         </Flex>
 

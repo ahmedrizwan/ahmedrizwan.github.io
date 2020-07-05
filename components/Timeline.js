@@ -26,7 +26,9 @@ const TimelineStepTitle = ({ title, event, link }) => {
   return (
     <Flex align="center">
       {/* <Icon name="check-circle" mr={2} color="whatsapp.500" /> */}
-      <Text fontWeight="medium">{title} — {event}</Text>
+      <Text fontWeight="medium">
+        {title} — {event}
+      </Text>
       {link && <Icon name="external-link" mx={2} size="16px" />}
     </Flex>
   );
@@ -76,7 +78,7 @@ const Timeline = () => {
       <List>
         <TimelineStep
           title="Declarative UIs with Jetpack Compose"
-					event="Devenings"
+          event="Devenings"
           link="http://facebook.com/deveningsGlobal/videos/329157298093960/"
         >
           A talk on how to build simple (and complex) UI layouts using the new
@@ -96,7 +98,7 @@ const Timeline = () => {
       <List>
         <TimelineStep
           title="Kotlin for Java Developers"
-					event="DevCon 19"
+          event="DevCon 19"
           link="https://www.facebook.com/events/510076783093299/"
         >
           Gave a talk to promote Kotlin as an alternative to Java for Android
@@ -106,7 +108,7 @@ const Timeline = () => {
         </TimelineStep>
         <TimelineStep
           title="Writing Custom DSLs with Kotlin"
-					event="Kotlin Everywhere"
+          event="Kotlin Everywhere"
           link="https://www.facebook.com/events/380525735959297/"
         >
           Described the characteristics of Domain Specific Language(s), both
@@ -115,7 +117,7 @@ const Timeline = () => {
         </TimelineStep>
         <TimelineStep
           title="Leveraging Kotlin for App Development"
-					event="Google I/O Extended"
+          event="Google I/O Extended"
           link="https://www.facebook.com/events/432103034235407/"
         >
           Gave a talk to promote Kotlin as a programming language for Android -
@@ -124,7 +126,7 @@ const Timeline = () => {
         </TimelineStep>
         <TimelineStep
           title="Creating Robust Apps with Kotlin & Architecture Components"
-					event="Kotlin Everywhere"
+          event="Kotlin Everywhere"
           link="https://www.facebook.com/events/1099937950198037/"
         >
           Gave an overview of Architecture Components and how it improves
@@ -133,7 +135,7 @@ const Timeline = () => {
         </TimelineStep>
         <TimelineStep
           title="Real world Functional Programming with Kotlin"
-					event="Devenings"
+          event="Devenings"
           link="https://speakerdeck.com/ahmedrizwan/real-world-functional-programming-with-kotlin"
         >
           Demonstrated how we can do practical functional programming in Kotlin
