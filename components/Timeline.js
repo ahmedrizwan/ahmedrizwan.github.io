@@ -142,6 +142,46 @@ const Timeline = () => {
           using the Arrow functional toolkit.
         </TimelineStep>
       </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
+        2018
+      </Heading>
+      <List>
+        <TimelineStep
+          title="Intro to RxJs"
+          event="KualaLumpurJS"
+          link="https://www.facebook.com/events/179891922621422/"
+        >
+          Gave an introduction talk on RxJS, on a weekly event hosted by
+          KualaLumpurJS, also described where it can be used, plus a live demo.
+        </TimelineStep>
+      </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
+        2016
+      </Heading>
+      <List>
+        <TimelineStep
+          title="Cross Platform apps with React Native and MobX"
+          event="IslamabadJS"
+          link="https://slides.com/ahmedrizwan/deck-1"
+        >
+          Gave a talk on using React Native as a cross-platform solution, plus
+          how easy it is to manage app state with MobX.
+        </TimelineStep>
+      </List>
     </Flex>
   );
 };
