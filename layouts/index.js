@@ -10,6 +10,7 @@ import {
   Link,
   Box
 } from '@chakra-ui/core';
+
 import Container from '../components/Container';
 import BlogSeo from '../components/BlogSeo';
 

@@ -36,8 +36,8 @@ const Index = () => {
             <CustomLink href="https://twitter.com/snappymob">
               @Snappymob
             </CustomLink>
-            , writer and a public speaker. I write mostly on Android and Web. This is my
-            personal blog site.
+            , writer and a public speaker. I write mostly on Android and Web.
+            This is my personal blog site.
           </Text>
         </Flex>
       </Stack>
