@@ -18,7 +18,7 @@ const Container = ({ children }) => {
 
   const bgColor = {
     light: 'white',
-    dark: 'gray.900'
+    dark: 'rgb(24, 24, 24)'
   };
   const primarytextColor = {
     light: 'black',
@@ -26,7 +26,7 @@ const Container = ({ children }) => {
   };
   const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
-    dark: 'rgba(23, 25, 35, 0.8)'
+    dark: 'rgba(24, 24, 24, 0.8)'
   };
 
   return (
@@ -44,6 +44,19 @@ const Container = ({ children }) => {
         mb={8}
         mx="auto"
       >
+        <IconButton
+          aria-label="Toggle dark mode"
+          style={{
+            backgroundColor:
+              colorMode === 'dark' ? 'rgb(39, 39, 38)' : 'rgb(240, 240, 240)',
+            color:
+              colorMode === 'dark' ? 'rgb(253, 181, 43)' : 'rgb(24, 143, 242)',
+            boxShadow:
+              '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1)'
+          }}
+          icon={colorMode === 'dark' ? 'sun' : 'moon'}
+          onClick={toggleColorMode}
+        />
         <Box>
           <NextLink href="/" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
@@ -61,11 +74,6 @@ const Container = ({ children }) => {
             </Button>
           </NextLink>
         </Box>
-        <IconButton
-          aria-label="Toggle dark mode"
-          icon={colorMode === 'dark' ? 'sun' : 'moon'}
-          onClick={toggleColorMode}
-        />
       </StickyNav>
       <Flex
         as="main"
@@ -83,4 +91,3 @@ const Container = ({ children }) => {
 };
 
 export default Container;
-
