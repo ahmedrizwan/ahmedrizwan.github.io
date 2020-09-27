@@ -33,8 +33,8 @@ const Index = () => {
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
             I’m a Senior Software Engineer{' '}
-            <CustomLink href="https://twitter.com/snappymob">
-              @Snappymob
+            <CustomLink href="https://www.quixel.com">
+              @Quixel
             </CustomLink>
             , writer and a public speaker. I write mostly on Android and Web.
             This is my personal blog site.
