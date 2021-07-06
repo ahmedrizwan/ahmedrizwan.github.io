@@ -33,14 +33,14 @@ const GlobalStyle = ({ children }) => {
           html {
             min-width: 360px;
             scroll-behavior: smooth;
-            background: ${colorMode === 'light' ? 'white' : 'rgb(24, 24, 24)'};
+            background: ${colorMode === 'light' ? 'white' : 'rgb(32, 37, 49)'};
           }
 
           #__next {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === 'light' ? 'white' : 'rgb(24, 24, 24)'};
+            background: ${colorMode === 'light' ? 'white' : 'rgb(32, 37, 49)'};
           }
         `}
       />
