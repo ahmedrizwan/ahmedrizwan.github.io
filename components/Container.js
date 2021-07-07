@@ -1,6 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/core';
+import { useRouter } from 'next/router'
+import { useColorMode, Flex, IconButton } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 
 import Footer from './Footer';
@@ -15,62 +16,52 @@ const StickyNav = styled(Flex)`
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const router = useRouter();
+  const isAtHome = router.asPath === "/";
 
   const bgColor = {
     light: 'white',
-    dark: 'rgb(32, 37, 49)'
+    dark: 'rgb(18, 24, 38)'
   };
-  const primarytextColor = {
+  const primaryTextColor = {
     light: 'black',
     dark: 'white'
   };
   const navBgColor = {
-    light: 'rgba(255, 255, 255, 0.8)',
-    dark: 'rgba(32, 37, 49, 0.8)'
+    light: 'rgba(255, 255, 255, 0.9)',
+    dark: 'rgb(18, 24, 38, 0.9)'
   };
 
   return (
     <>
       <StickyNav
         flexDirection="row"
-        justifyContent="space-between"
-        alignItems="center"
-        maxWidth="900px"
+        justifyContent={isAtHome ? "flex-end" : "space-between"}
         width="100%"
         bg={navBgColor[colorMode]}
         as="nav"
-        p={8}
-        mt={[0, 8]}
-        mb={8}
+        p={4}
+        mb={0}
         mx="auto"
       >
+        {!isAtHome ? <NextLink href="/" passHref>
+            <IconButton
+                aria-label="Navigate back to home"
+                style={{
+                    backgroundColor: 'transparent',
+                    color: colorMode === 'dark' ? 'rgb(251, 225, 76)' : 'rgb(24, 143, 242)',
+                    fontSize: 24
+                }}
+                icon="arrow-back"
+            />
+        </NextLink> : undefined}
 
-        <Box>
-          <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Home
-            </Button>
-          </NextLink>
-          <NextLink href="/blog" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Blog
-            </Button>
-          </NextLink>
-          <NextLink href="/speaking" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Speaking
-            </Button>
-          </NextLink>
-        </Box>
         <IconButton
             aria-label="Toggle dark mode"
             style={{
-              backgroundColor:
-                  colorMode === 'dark' ? 'rgb(29,36,47)' : 'rgb(240, 240, 240)',
-              color:
-                  colorMode === 'dark' ? 'white' : 'rgb(24, 143, 242)',
-              boxShadow:
-                  '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1)'
+              backgroundColor: 'transparent',
+              color: colorMode === 'dark' ? 'rgb(251, 225, 76)' : 'rgb(24, 143, 242)',
+              fontSize: 24,
             }}
             icon={colorMode === 'dark' ? 'sun' : 'moon'}
             onClick={toggleColorMode}
@@ -81,7 +72,7 @@ const Container = ({ children }) => {
         justifyContent="center"
         flexDirection="column"
         bg={bgColor[colorMode]}
-        color={primarytextColor[colorMode]}
+        color={primaryTextColor[colorMode]}
         px={8}
       >
         {children}

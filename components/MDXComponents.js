@@ -53,7 +53,7 @@ const CustomLink = (props) => {
   const { colorMode } = useColorMode();
   const color = {
     light: 'hsl(208, 99%, 44%)',
-    dark: 'hsl(208, 95%, 68%)'
+    dark: 'rgb(251, 225, 76)'
   };
 
   const href = props.href;
